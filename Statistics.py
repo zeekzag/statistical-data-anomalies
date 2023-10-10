@@ -1,3 +1,5 @@
+import math
+
 class statistic_IQR:
     
         def upper(self, value):
@@ -9,7 +11,7 @@ class statistic_IQR:
                 self.upperindex = 0.75 * n
                 uppindex = self.upperindex
                 if isinstance(uppindex, float):
-                    uppindex = int(round(uppindex))
+                    uppindex = math.ceil(uppindex)
                     self.uppervalue = sortvalue[uppindex]
                     return self.uppervalue
                 else:
@@ -31,7 +33,7 @@ class statistic_IQR:
                 self.lowerindex = 0.25 * n
                 lowindex = self.lowerindex
                 if isinstance(lowindex, float):
-                    lowindex = int(round(lowindex))
+                    lowindex = math.ceil(lowindex)
                     self.lowervalue = sortvalue[lowindex]
                     return self.lowervalue
                 else:
